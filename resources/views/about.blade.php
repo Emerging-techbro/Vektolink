@@ -40,6 +40,16 @@
                 transition: all 0.3s ease;
                 font-size: 1rem;
             }
+            nav img {
+                margin-right: 1.5rem;
+                border-radius: 50%;
+                border: 2px solid white;
+                transition: transform 0.3s ease;
+            }
+            
+            nav img:hover {
+                transform: scale(1.1);
+            }
             
             nav button:hover {
                 background-color: white;
@@ -163,6 +173,7 @@
     <body>
         <nav>
             <p> 
+                 <center> <img src="Logo.jpeg" width="80px" height="80px"> <center>
                  <center> 
                  <a href="{{ url('/') }}"><button> Home </button></a>
                  <a href="{{ url('/about') }}"><button> About </button></a>
@@ -183,18 +194,6 @@
             reliable, and affordable services to individuals and businesses. 
             Whether you need graphic design, software installations, game setups, 
             system troubleshooting, drive partitioning, or software fixes, we've got you covered!
-        </p>
-        <h2>Our Services</h2>
-        <p>
-           <ul>
-           <li><b>Graphic Design</b> - Stunning logos, banners, flyers, social media posts, and branding materials 
-                                     tailored to your needs.</li>
-           <li><b>Software & Game Installations</b> - Hassle-free setup of software, games, and applications.</li>
-           <li><b>Tech Troubleshooting</b> - Diagnosing and fixing software errors, crashes, and performance issues.</li>
-           <li><b>Drive Partitioning & Optimization</b> - Safely managing disk space for better performance.</li>
-           <li> <b>System Optimization & Repair</b> - Enhancing your PC's speed and stability.</li>
-           </ul>
-        </p>
         <h2>Why Choose Us?</h2>
         <p>
             <ul>

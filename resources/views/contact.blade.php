@@ -23,6 +23,16 @@
             nav p {
                 margin: 0;
             }
+            nav img {
+                margin-right: 1.5rem;
+                border-radius: 50%;
+                border: 2px solid white;
+                transition: transform 0.3s ease;
+            }
+            
+            nav img:hover {
+                transform: scale(1.1);
+            }
             
             nav button {
                 background-color: rgba(255, 255, 255, 0.2);
@@ -118,6 +128,7 @@
     <body>
         <nav>
             <p> 
+               <center><img src="logo.jpeg" width="80" height="80"><center>
                  <center> 
                  <a href="{{ url('/') }}"><button> Home </button></a>
                  <a href="{{ url('/about') }}"><button> About </button></a>

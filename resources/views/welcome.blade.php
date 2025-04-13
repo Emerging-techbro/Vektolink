@@ -105,7 +105,7 @@
         <body> 
             <nav>
                 <p> 
-                   <img src="Logo.jpeg" width="50px" height="50px">
+                   <img src="Logo.jpeg" width="80px" height="80px">
                      <center> 
                      <a href="{{ url('/') }}"><button> Home </button></a>
                      <a href="{{ url('/about') }}"><button> About </button></a>
