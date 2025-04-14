@@ -15,3 +15,23 @@
             <a href="{{ url('sales')}}"><button>Sales</button></a>
         </p>
     </nav>
+
+    <form method="post" action="{{url('add product')}}">
+        @csrf
+           Category_id:<br>
+          <select name="category_id">
+            <option>--Select Category--</option>
+            @foreach($category as $cat)
+            <option value="{{$cat->id}}">{{$cat->category_name}}</option>
+            @endforeach
+          </select><br>
+          
+           Product_id <br>
+           <input type="text" name="product_id"> <br>
+           Product_name <br>
+           <input type="text" name="product_name"> <br>
+           Product_details <br>
+           <input type="text" name="product_details"> <br>
+           <button type="submit">Submit</button>
+           
+    </form>

@@ -15,3 +15,15 @@
             <a href="{{ url('sales')}}"><button>Sales</button></a>
         </p>
     </nav>
+
+    <form method="post" action="{{url('add client')}}">
+        @csrf
+           Client_name:<br>
+          <input type="numbers" name="client_name"><br>
+           Client_number <br>
+           <input type="text" name="client_number"> <br>
+           Client_location <br>
+           <input type="text" name="client_location"> <br>
+           <button type="submit">Submit</button>
+           
+    </form>

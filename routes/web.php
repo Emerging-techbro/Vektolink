@@ -57,3 +57,7 @@ Route::get('/client', [ClientController::class, 'client']);
 Route::get('/product', [ProductController::class, 'product']);
 Route::get('/sales', [SalesController::class, 'sales']);
 Route::get('/dashboard', [DashboardController::class, 'dashboard']);
+
+//CRUD (still backend stuff)
+Route::post('/add category', [CategoryController::class,'add_category']);
+Route::post('/add client', [ClientController::class,'add_client']);

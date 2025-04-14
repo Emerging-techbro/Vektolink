@@ -16,3 +16,16 @@
 
         </p>
     </nav>
+
+
+    <form method="post" action="{{url('add category')}}">
+        @csrf
+           Category_id:<br>
+          <input type="numbers" name="category_id"><br>
+           Category_name <br>
+           <input type="text" name="category_name"> <br>
+           Category_details <br>
+           <input type="text" name="category_details"> <br>
+           <button type="submit">Submit</button>
+           
+    </form>
