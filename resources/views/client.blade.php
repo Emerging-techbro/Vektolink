@@ -27,3 +27,26 @@
            <button type="submit">Submit</button>
            
     </form>
+
+    <table border="10px">
+        <tr>
+            <th>id</th>
+            <th>client_name</th>
+            <th>client_number</th>
+            <th>client_location</th>
+            <th>created_at</th>
+            <th>updated_at</th>
+        </tr>
+        @foreach($client as $cli)
+        <tr>
+            <td>{{$cli->id}} </td>
+            <td>{{$cli->client_name}} </td>
+            <td>{{$cli->client_number}}</td>
+            <td>{{$cli->client_location}} </td>
+            <td>{{$cli->created_at}}</td>
+            <td>{{$cli->updated_at}} </td>
+        </tr>
+        @endforeach
+    </table>
+</body>
+</html>

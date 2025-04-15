@@ -10,7 +10,8 @@ class CategoryController extends Controller
 {
     //
     public function  category(){
-        return view('category');
+        $category=CategoryModel::all();
+        return view('category',compact('category'));
     }
     
 

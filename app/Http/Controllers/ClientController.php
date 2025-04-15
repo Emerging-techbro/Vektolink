@@ -9,7 +9,8 @@ class ClientController extends Controller
 {
     //
     public function  client(){
-        return view('client');
+        $client=ClientModel::all();
+        return view('client',compact('client'));
     }
 
          //adding of the addclient

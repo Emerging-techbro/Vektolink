@@ -61,3 +61,4 @@ Route::get('/dashboard', [DashboardController::class, 'dashboard']);
 //CRUD (still backend stuff)
 Route::post('/add category', [CategoryController::class,'add_category']);
 Route::post('/add client', [ClientController::class,'add_client']);
+Route::post('/add product',[ProductController::class,'add_product']);
