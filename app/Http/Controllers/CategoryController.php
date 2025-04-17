@@ -27,4 +27,25 @@ class CategoryController extends Controller
 
        return redirect()->back()->with('status','Category Successful');
     }
+
+
+    //method for the editing
+    public function edit_category($id) {
+        $category= CategoryModel::find($id);
+        return view('edit_category',compact('category'));
+    }
+
+    //method for updating after editing
+    public function update_category($id, Request $request) {
+        $category= CategoryModel::find($id);
+
+       $category->category_id=$request->input('category_id');
+       $category->category_name=$request->input('category_name');
+       $category->category_details=$request->input('category_details');
+       $category->update();
+
+       return redirect('/category');
+
+    }
+    
 }

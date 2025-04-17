@@ -36,6 +36,7 @@
             <th>client_location</th>
             <th>created_at</th>
             <th>updated_at</th>
+            <th>Action</th>
         </tr>
         @foreach($client as $cli)
         <tr>
@@ -45,6 +46,9 @@
             <td>{{$cli->client_location}} </td>
             <td>{{$cli->created_at}}</td>
             <td>{{$cli->updated_at}} </td>
+            <td><a href=""><button style="background-color: red; color: white;">Delete</button> </a>
+                <a href="{{ url('edit-client-'.$cli->id)}}"><button style="background-color: yellow; color: black;">Edit</button> </a>
+            </td>
         </tr>
         @endforeach
     </table>

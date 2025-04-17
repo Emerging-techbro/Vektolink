@@ -34,6 +34,7 @@
            <input type="text" name="product_details"> <br>
            <button type="submit">Submit</button>
            
+           
     </form>
     
     <table border="10px">
@@ -45,6 +46,7 @@
             <th>product_details</th>
             <th>created_at</th>
             <th>updated_at</th>
+            <th>Action</th>
         </tr>
         @foreach($product as $pro)
         <tr>
@@ -55,6 +57,8 @@
             <td>{{$pro->product_details}} </td>
             <td>{{$pro->created_at}}</td>
             <td>{{$pro->updated_at}} </td>
+            <td><a href=""><button style="background-color: red; color: white;">Delete</button> </a>
+                <a href="{{ url('edit-product-'.$pro->id)}}"><button style="background-color: yellow; color: black;">Edit</button> </a>
         </tr>
         @endforeach
     </table>

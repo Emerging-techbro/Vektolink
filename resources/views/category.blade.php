@@ -37,6 +37,7 @@
             <th>category_details</th>
             <th>created_at</th>
             <th>updated_at</th>
+            <th>Action</th>
         </tr>
         @foreach($category as $cat)
         <tr>
@@ -46,6 +47,9 @@
             <td>{{$cat->category_details}} </td>
             <td>{{$cat->created_at}}</td>
             <td>{{$cat->updated_at}} </td>
+            <td><a href=""><button style="background-color: red; color: white;">Delete</button> </a>
+                <a href="{{ url('edit-category-'.$cat->id)}}"><button style="background-color: yellow; color: black;">Edit</button> </a>
+            </td>
         </tr>
         @endforeach
     </table>

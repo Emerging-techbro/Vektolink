@@ -62,3 +62,13 @@ Route::get('/dashboard', [DashboardController::class, 'dashboard']);
 Route::post('/add category', [CategoryController::class,'add_category']);
 Route::post('/add client', [ClientController::class,'add_client']);
 Route::post('/add product',[ProductController::class,'add_product']);
+
+//Editing
+Route::get('/edit-category-{id}', [CategoryController::class, 'edit_category']);
+Route::post('/update-category-{id}',[CategoryController::class, 'update_category']);
+
+Route::get('/edit-client-{id}',[ClientController::class, 'edit_client']);
+Route::post('/update-client-{id}',[ClientController::class, 'update_client']);
+
+Route::get('/edit-product-{id}',[ProductController::class, 'edit_product']);
+Route::post('/update-product-{id}',[ProductController::class, 'update_product']);
