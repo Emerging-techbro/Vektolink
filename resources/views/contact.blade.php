@@ -152,7 +152,7 @@
     </p>
     <h3>📞 Phone / WhatsApp</h3>
     <p> <b>🔹 Call/Text</b> +233 245476307 <br>
-       <b> 🔹 WhatsApp</b> +233 245476307
+       <b> 🔹 WhatsApp</b> +233 593085503
     </p>
     <h3>📍 Location</h3>
     <p><b>🔹 Service Area<b>: University Of Cape Coast</p>
