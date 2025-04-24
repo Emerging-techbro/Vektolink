@@ -182,7 +182,6 @@
             </p>
             
             <h2> Software & Tech Support</h2>
-        
             <h3>💾 Software & Game Installations</h3>
             <p>Struggling with setup? We handle:</p>
             <ul>

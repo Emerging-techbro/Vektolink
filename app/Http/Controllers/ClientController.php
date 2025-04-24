@@ -46,4 +46,13 @@ class ClientController extends Controller
 
     }
 
+     //method for the delete
+     public function delete_client($id) {
+        $client= ClientModel::find($id);
+
+        $client->delete();
+        
+        return redirect('/client');        
+    }
+
     }

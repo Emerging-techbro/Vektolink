@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html> 
+
     <head>
         <title> Kelly's Tech Solutions </title>
         <style>
@@ -171,6 +172,7 @@
         </style>
     </head>
     <body>
+        
         <nav>
             <p> 
                  <center> <img src="Logo.jpeg" width="80px" height="80px"> <center>

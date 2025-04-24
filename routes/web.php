@@ -62,7 +62,7 @@ Route::get('/dashboard', [DashboardController::class, 'dashboard']);
 Route::post('/add category', [CategoryController::class,'add_category']);
 Route::post('/add client', [ClientController::class,'add_client']);
 Route::post('/add product',[ProductController::class,'add_product']);
-Route::post('/add sales', [SalesController::class,'add_sales']);
+Route::post('/add-sales', [SalesController::class,'add_sales']);
 
 //Editing
 Route::get('/edit-category-{id}', [CategoryController::class, 'edit_category']);
@@ -76,3 +76,12 @@ Route::post('/update-product-{id}',[ProductController::class, 'update_product'])
 
 Route::get('/edit-sales-{id}',[SalesController::class, 'edit_sales']);
 Route::post('/update-sales-{id}',[SalesController::class, 'update_sales']);
+
+//deleting
+Route::get('/delete-category-{id}', [CategoryController::class,'delete_category']);
+
+Route::get('/delete-client-{id}', [ClientController::class,'delete_client']);
+
+Route::get('delete-sales-{id}', [SalesController::class,'delete_sales']);
+
+Route::get('delete-product-{id}', [ProductController::class,'delete_product']);

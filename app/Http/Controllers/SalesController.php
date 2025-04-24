@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\SalesModel;
 use App\Models\ProductModel;
 use App\Models\ClientModel;
+use App\Models\CategoryModel;
 use Illuminate\Http\Request;
 
 class SalesController extends Controller
@@ -13,7 +14,8 @@ class SalesController extends Controller
     $sales=SalesModel::all();
     $product=ProductModel::all();
     $client=ClientModel::all();
-       return view('sales',compact('sales','product','client'));
+    $category=CategoryModel::all();
+       return view('sales',compact('sales','product','client','category'));
 
    }
 
@@ -52,6 +54,13 @@ public function add_sales(Request $request){
     return redirect('/sales');
 
     }
+    //method for the delete
+    public function delete_sales($id) {
+    $sales= SalesModel::find($id);
 
+    $sales->delete();
+    
+    return redirect('/sales');        
+}
 
 }

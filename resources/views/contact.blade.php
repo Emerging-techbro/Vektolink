@@ -19,7 +19,7 @@
                 padding: 15px 0;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             }
-            
+        
             nav p {
                 margin: 0;
             }
@@ -123,7 +123,6 @@
                 }
             }
         </style>
-
     </head>
     <body>
         <nav>
