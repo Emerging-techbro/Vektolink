@@ -198,7 +198,7 @@
          <!-- Navigation column (left side) -->
         <nav> 
             <p>
-                <a href="{{ url('/admin') }}"><button>Admin</button></a>
+                <a href="{{ url('/login') }}"><button>Login</button></a>
                 <a href="{{ url('dashboard')}}"><button>Dashboard</button></a>
                 <a href="{{ url('category')}}"><button>Category</button></a>
                 <a href="{{ url('client')}}"><button>Client</button></a>
@@ -213,20 +213,20 @@
                 <h1>Edit Product</h1>
                 <div class="user-profile">
                     <img src="admin.jpg" alt="Admin">
-                    <span>Admin</span>
+                    <span>{{Auth::user()->name}}</span>
                 </div>
             </div>
-<form method="post" action="{{url('update-product-'.$product->id)}}">
+<form method="post" action="{{url('update-product-'.$product->id)}}" >
         @csrf
            Category_id:<br>
-          <select name="category_id">
+         <select name="category_id" style= "width: 400px; height: 32.67px;">
             <option value="{{$product->id}}">{{$product->id}}</option>
             <option>--Change Category--</option>
             @foreach($category as $cat)
             <option value="{{$cat->id}}">{{$cat->category_name}}</option>
             @endforeach
           </select><br>
-          
+       
            Product_id <br>
            <input type="text" value="{{$product->product_id}}" name="product_id"> <br>
            Product_name <br>

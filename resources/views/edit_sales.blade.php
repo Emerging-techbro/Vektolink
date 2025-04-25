@@ -199,7 +199,7 @@
          <!-- Navigation column (left side) -->
         <nav> 
             <p>
-                <a href="{{ url('/admin') }}"><button>Admin</button></a>
+                <a href="{{ url('/login') }}"><button>Login</button></a>
                 <a href="{{ url('dashboard')}}"><button>Dashboard</button></a>
                 <a href="{{ url('category')}}"><button>Category</button></a>
                 <a href="{{ url('client')}}"><button>Client</button></a>
@@ -214,13 +214,13 @@
                 <h1>Edit Sales</h1>
                 <div class="user-profile">
                     <img src="admin.jpg" alt="Admin">
-                    <span>Admin</span>
+                    <span>{{Auth::user()->name}}</span>
                 </div>
             </div>
 <form method="post" action="{{url('update-sales-'.$sales->id)}}">
         @csrf
            Product_id <br>
-           <select name="product_id">
+           <select name="product_id" style= "width: 400px; height: 32.67px;">
            <option value="{{$sales->product_id}}">{{$sales->product_id}}</option>
             <option>--Change Product--</option>
             @foreach($product as $pro)
@@ -228,7 +228,7 @@
             @endforeach
             </select><br>
            client_id <br>
-           <select name="client_id">
+           <select name="client_id" style= "width: 400px; height: 32.67px;">
             <option value="{{$sales->client_id}}">{{$sales->client_id}}</option>
             <option>--Change Client--</option>
             @foreach($client as $cli)

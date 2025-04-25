@@ -85,3 +85,7 @@ Route::get('/delete-client-{id}', [ClientController::class,'delete_client']);
 Route::get('delete-sales-{id}', [SalesController::class,'delete_sales']);
 
 Route::get('delete-product-{id}', [ProductController::class,'delete_product']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

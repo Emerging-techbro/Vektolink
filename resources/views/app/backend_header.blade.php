@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head>
-        <title> Kelly's Tech Solutions </title>
+    <head>
+        <title>Kelly's Tech Solutions</title>
         <style>
+
             /* Modern styling for the page */
             * {
                 margin: 0;
@@ -79,6 +80,60 @@
                 opacity: 1;
             }
             
+
+            /* Main Content Area - Right Side */
+            main {
+                flex: 1;
+                margin-left: 240px;
+                padding: 2rem;
+            }
+            
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 2rem;
+                padding-bottom: 1.5rem;
+                border-bottom: 1px solid #e2e8f0;
+            }
+            
+            .header h1 {
+                color: #1e293b;
+                font-size: 1.75rem;
+                font-weight: 700;
+            }
+            
+            .user-profile {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+            }
+            
+            .user-profile img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 2px solid #e2e8f0;
+            }
+            
+            .user-profile span {
+                font-weight: 600;
+                color: #334155;
+            }
+            
+            .content {
+                background: white;
+                padding: 2rem;
+                border-radius: 0.5rem;
+                box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+                border: 1px solid #e2e8f0;
+            }
+            
+            .content p {
+                color: #64748b;
+                margin-bottom: 1rem;
+            }
             /* Main Content Area - Right Side */
             .main-content {
                 flex: 1;
@@ -191,42 +246,32 @@
                     margin-left: 70px;
                     padding: 1rem;
                 }
+
+                .header {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 1rem;
+                }
             }
         </style>
-
     </head>
-<body>
-         <!-- Navigation column (left side) -->
+    <body> 
+        <!-- Navigation column (left side) -->
         <nav> 
             <p>
-                <a href="{{ url('/login') }}"><button>Login</button></a>
-                <a href="{{ url('dashboard')}}"><button>Dashboard</button></a>
-                <a href="{{ url('category')}}"><button>Category</button></a>
-                <a href="{{ url('client')}}"><button>Client</button></a>
-                <a href="{{ url('product')}}"><button>Product</button></a>
-                <a href="{{ url('sales')}}"><button>Sales</button></a>
+                <a href="{{ url('dashboard')}}"><button><span>Dashboard</span></button></a>
+                <a href="{{ url('category')}}"><button><span>Category</span></button></a>
+                <a href="{{ url('client')}}"><button><span>Client</span></button></a>
+                <a href="{{ url('product')}}"><button><span>Product</span></button></a>
+                <a href="{{ url('sales')}}"><button><span>Sales</span></button></a>
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        <button><span>Logout</span></button>
+                                    </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
             </p>
         </nav>
-
-         <!-- Main content area with your form and table -->
-         <div class="main-content">
-            <div class="header">
-                <h1>Edit Client</h1>
-                <div class="user-profile">
-                    <img src="admin.jpg" alt="Admin">
-                    <span>{{Auth::user()->name}}</span>
-                </div>
-            </div>
-    <form method="post" action="{{url('update-client-'.$client->id)}}">
-        @csrf
-           Client_name:<br>
-          <input type="numbers" value="{{$client->client_name}}" name="client_name"><br>
-           Client_number <br>
-           <input type="text" value="{{$client->client_number}}" name="client_number"> <br>
-           Client_location <br>
-           <input type="text" value="{{$client->client_location}}" name="client_location"> <br>
-           <button type="submit">Update</button>
-           
-    </form>
-</body>
-<html>
+        

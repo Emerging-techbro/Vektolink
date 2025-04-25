@@ -199,7 +199,7 @@
          <!-- Navigation column (left side) -->
         <nav> 
             <p>
-                <a href="{{ url('/admin') }}"><button>Admin</button></a>
+                <a href="{{ url('/login') }}"><button>login</button></a>
                 <a href="{{ url('dashboard')}}"><button>Dashboard</button></a>
                 <a href="{{ url('category')}}"><button>Category</button></a>
                 <a href="{{ url('client')}}"><button>Client</button></a>
@@ -214,7 +214,7 @@
                 <h1>Edit Category</h1>
                 <div class="user-profile">
                     <img src="admin.jpg" alt="Admin">
-                    <span>Admin</span>
+                    <span>{{Auth::user()->name}}</span>
                 </div>
             </div>
 

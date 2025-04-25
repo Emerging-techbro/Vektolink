@@ -111,7 +111,7 @@
                      <a href="{{ url('/about') }}"><button> About </button></a>
                      <a href="{{ url('/service') }}"><button> Services</button></a>
                      <a href="{{ url('/contact') }}"><button> Contact </button></a>
-                     <a href="{{ url('/admin') }}"><button> Admin <button></a>
+                     <a href="{{ url('/login') }}"><button> Login <button></a>
                     </center>
                 </p>
                 
